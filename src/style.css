@@ -60,64 +60,26 @@
     #contact-form {
         max-width: 100%;
     }
-}
-/* CEO Slider Styles */
-.ceo-slider {
-    width: 100%;
-    max-width: 500px;
-    margin: 2rem auto 2rem auto;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 2px 16px rgba(25, 118, 210, 0.08);
-    background: #fff;
-    position: relative;
-    animation: ceo-slide-in 1.5s cubic-bezier(0.77,0,0.175,1) 1;
-}
-.ceo-slide {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 1.5rem;
-    animation: ceo-slide-in 1.5s cubic-bezier(0.77,0,0.175,1) 1;
-}
-.ceo-photo {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #1976d2;
-    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
-    background: #e3f2fd;
-}
-.ceo-caption {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.ceo-caption h3 {
-    margin: 0 0 0.2rem 0;
-    font-size: 1.5rem;
-    color: #1976d2;
-}
-.ceo-caption p {
-    margin: 0;
-    font-size: 1.1rem;
-    color: #333;
-}
-@keyframes ceo-slide-in {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
+    .profile-card {
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
     }
-    60% {
-        transform: translateX(20%);
-        opacity: 1;
+    .profile-photo {
+        width: 110px;
+        height: 110px;
     }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
+    .profile-info h2 {
+        font-size: 1.3rem;
+    }
+    .highlight-box {
+        padding: 1.5rem;
+    }
+    .highlight-box h2 {
+        font-size: 1.5rem;
     }
 }
+
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
@@ -191,6 +153,81 @@ section {
 }
 #contact-form button:hover {
     background: #1565c0;
+}
+/* Profile Card Styles */
+.profile-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 5px solid #1976d2;
+    object-fit: cover;
+    background: #e3f2fd;
+    box-shadow: 0 4px 24px rgba(25, 118, 210, 0.18);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: dropDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.profile-photo:hover, .profile-photo:focus {
+    transform: scale(1.08) rotate(-2deg);
+    box-shadow: 0 8px 36px rgba(25, 118, 210, 0.28), 0 3px 12px rgba(21, 101, 192, 0.18);
+    outline: none;
+}
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+.profile-info h2 {
+    margin: 0 0 0.5rem 0;
+    color: #1976d2;
+    font-size: 1.6rem;
+}
+.profile-info p {
+    margin: 0;
+    color: #666;
+    font-size: 1.1rem;
+}
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-120px);
+    }
+    60% {
+        transform: translateY(12px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.highlight-box {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 12px;
+    padding: 2.5rem;
+    text-align: center;
+    max-width: 700px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+.highlight-box h2 {
+    margin: 0 0 1rem 0;
+    color: #1565c0;
+    font-size: 2rem;
+}
+.highlight-box p {
+    margin: 0;
+    color: #333;
+    font-size: 1.15rem;
+    line-height: 1.6;
 }
 footer {
     background: #eee;
