@@ -8,53 +8,28 @@
     <link rel="stylesheet" href="sidebar.css">
 </head>
 <body>
-    <header style="margin-left:220px">
-        <button id="sidebar-toggle" aria-label="Toggle menu" style="display:none;background:none;border:none;font-size:2rem;color:#fff;position:absolute;left:1rem;top:1rem;z-index:300;cursor:pointer;">
-            &#9776;
-        </button>
-        <h1 style="margin-left:2.5rem">PharmaCo</h1>
-    </header>
     <aside class="sidebar">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li>
-                <a href="#open-positions" class="dropdown-btn">Open Positions</a>
-                <ul class="dropdown">
-                    <li><a href="#open-positions">Research Scientist</a></li>
-                    <li><a href="#open-positions">QA Analyst</a></li>
-                    <li><a href="#open-positions">Sales Manager</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#news" class="dropdown-btn">News</a>
-                <ul class="dropdown">
-                    <li><a href="#news">Latest Announcements</a></li>
-                    <li><a href="#news">Press Releases</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#team" class="dropdown-btn">Team</a>
-                <ul class="dropdown">
-                    <li><a href="#team">Leadership</a></li>
-                    <li><a href="#team">Staff</a></li>
-                </ul>
-            </li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <h2>PharmaCo</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Open Positions</a>
+            <a href="#">News</a>
+            <a href="#">Team</a>
+            <a href="#">About</a>
+            <a href="#">Products</a>
+            <a href="#">Contact</a>
+        </nav>
     </aside>
-    <main style="margin-left:220px">
-        <section id="ceo-slider" class="ceo-slider">
-            <div class="ceo-slide">
-                <img src="ceo.jpg" alt="Muralidhara Reddy - Managing Director and CEO" class="ceo-photo" />
-                <div class="ceo-caption">
-                    <h3>Muralidhara Reddy Sathi</h3>
-                    <p>Managing Director & CEO</p>
-                </div>
+    <main class="main-content">
+        <header class="header">PharmaCo</header>
+        <section class="profile-card">
+            <img class="profile-photo" src="ceo.jpg" alt="Profile Photo">
+            <div class="profile-info">
+                <h3>Muralidhara Reddy Sathi</h3>
+                <p>Managing Director &amp; CEO</p>
             </div>
         </section>
-        <section id="hero">
+        <section class="highlight-box">
             <h2>Innovative Pharmaceutical Solutions</h2>
             <p>Your trusted partner in healthcare.</p>
         </section>
@@ -79,30 +54,7 @@
     <footer>
         <p>&copy; 2026 PharmaCo. All rights reserved.</p>
     </footer>
-        <script src="app.js"></script>
-        <script src="sidebar.js"></script>
-        <script>
-        // Mobile sidebar toggle
-        function handleSidebarToggle() {
-            const sidebar = document.querySelector('.sidebar');
-            const toggleBtn = document.getElementById('sidebar-toggle');
-            if (!sidebar || !toggleBtn) return;
-            function updateSidebarDisplay() {
-                if (window.innerWidth <= 700) {
-                    toggleBtn.style.display = 'block';
-                    sidebar.classList.remove('open');
-                } else {
-                    toggleBtn.style.display = 'none';
-                    sidebar.classList.remove('open');
-                }
-            }
-            toggleBtn.onclick = () => {
-                sidebar.classList.toggle('open');
-            };
-            window.addEventListener('resize', updateSidebarDisplay);
-            updateSidebarDisplay();
-        }
-        document.addEventListener('DOMContentLoaded', handleSidebarToggle);
-        </script>
+    <script src="app.js"></script>
+    <script src="sidebar.js"></script>
 </body>
 </html>
