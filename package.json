@@ -1,0 +1,13 @@
+{
+  "name": "pharmaco-webapp",
+  "version": "1.0.0",
+  "description": "A modern web application for a pharmaceutical company using HTML, CSS, and TypeScript.",
+  "scripts": {
+    "build": "tsc -p src",
+    "start": "npx serve src"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "serve": "^14.0.1"
+  }
+}
